@@ -15,13 +15,20 @@ export class ExampleService {
   ];
 
   public albums = [
+    'Detailed shots',
     'Model 1',
     'Model 2',
-    'Detailed shots',
-
   ];
 
   public photos = [
+    // details
+    [
+      '../assets/imgs/post_1/detail_3.jpg',
+      '../assets/imgs/post_1/detail_4.jpg',
+      '../assets/imgs/post_1/detail_5.jpg',
+      '../assets/imgs/post_1/detail_6.jpg',
+      '../assets/imgs/post_1/detail_7.jpg'
+    ], 
     // model 1
     [
       '../assets/imgs/table_1_front.jpg', 
@@ -33,15 +40,8 @@ export class ExampleService {
       '../assets/imgs/table_2.jpg',
       '../assets/imgs/closeup_1.jpg', 
       '../assets/imgs/closeup_2.jpg', 
-    ],
-    // details
-    [
-      '../assets/imgs/post_1/detail_3.jpg',
-      '../assets/imgs/post_1/detail_4.jpg',
-      '../assets/imgs/post_1/detail_5.jpg',
-      '../assets/imgs/post_1/detail_6.jpg',
-      '../assets/imgs/post_1/detail_7.jpg'
-    ],  
+    ]
+ 
   ]
 
   public tafels = {
