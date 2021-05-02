@@ -1,0 +1,115 @@
+
+
+<ion-content [fullscreen]="false">
+
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ folder }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+
+    <ion-col>
+
+      <ion-row>
+        <div class="company_details">
+          <ion-img class="logo" src="assets/imgs/bela_tafels_logo_outline.png"></ion-img>
+          
+          <strong *ngIf=" this.folder == 'Home' || this.folder == 'Contact' || this.folder == 'About'" class="capitalize">One of it's kind.</strong>
+          <strong *ngIf=" this.folder == 'tablemodel1'">Table 1 - Chestnut</strong>
+          <strong *ngIf=" this.folder == 'tablemodel2'">Table 2 - Walnut</strong>
+        
+        </div>
+      </ion-row>
+
+      <ion-row *ngIf=" this.folder == 'Home'">
+        <div class="text-block__main">Each of our tables is unique piece. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ea ipsum facilis, nisi fugit voluptatem illum. Provident pariatur quasi a porro quam ipsum nisi, itaque laborum hic maxime dolor autem.</div>
+        <div class="text-block">Please have a look at our current creations below:</div>
+        <ion-card *ngFor="let pic of this.myService.photos; let i = index" (click)="navigateTo('tablemodel1')" class="pic-container">
+          <img class="pic" src="{{ pic[0] }}"> 
+          <ion-card-header>
+            <ion-card-title>{{ this.myService.albums[i] }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            Test description about a particular model.
+          </ion-card-content>
+        </ion-card>
+      </ion-row>
+
+      <ion-row *ngIf=" this.folder == 'tablemodel1'">
+        <div class="spacer"></div>
+        <div class="text-block"> Here comes some info about this table. Here comes some info about this table. Here comes some info about this table. Here comes some info about this table. Here comes some info about this table. Here comes some info about this table. Here comes some info about this table. Here comes some info about this table. Here comes some info about this table. </div>
+        <div class="spacer"></div>
+        
+        <ion-card *ngFor="let pic of this.myService.photos[0]; let i = index" (click)="navigateTo('tablemodel1')" class="pic-container">
+          <img class="pic" src="{{ pic }}"> 
+          <ion-card-header>
+            <!-- <ion-card-title>{{ this.myService.albums[i] }}</ion-card-title> -->
+          </ion-card-header>
+          <ion-card-content>
+            Test description about a particular photo.
+          </ion-card-content>
+        </ion-card>
+      </ion-row>
+
+      <ion-row *ngIf=" this.folder == 'tablemodel2'">
+        <div class="spacer"></div>
+        <div class="text-block"> Here comes some info about this table. Here comes some info about this table. Here comes some info about this table. Here comes some info about this table. Here comes some info about this table. Here comes some info about this table. Here comes some info about this table. Here comes some info about this table. Here comes some info about this table. </div>
+        <div class="spacer"></div>
+        
+        <ion-card *ngFor="let pic of this.myService.photos[1]; let i = index" (click)="navigateTo('tablemodel1')" class="pic-container">
+          <img class="pic" src="{{ pic }}"> 
+          <ion-card-header>
+            <!-- <ion-card-title>{{ this.myService.albums[i] }}</ion-card-title> -->
+          </ion-card-header>
+          <ion-card-content>
+            Test description about a particular photo.
+          </ion-card-content>
+        </ion-card>
+      </ion-row>
+
+      <ion-row *ngIf=" this.folder == 'About'">
+        <ion-card  class="about-container">
+          <ion-card-header>
+            <ion-card-title>BELA TAFELS</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <div class="text-block">  We are based in Rotterdam, NL. </div>
+            <div class="text-block"> Text about BELA TAFELS. Text about BELA TAFELS. Text about BELA TAFELS. Text about BELA TAFELS. Text about BELA TAFELS. Text about BELA TAFELS. Text about BELA TAFELS. Text about BELA TAFELS. Text about BELA TAFELS. </div>
+            <div class="text-block">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo error tempora magni reprehenderit at pariatur dolorum. Ex, alias dolor vitae voluptates blanditiis libero molestiae veniam nihil quod cum fuga voluptas. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci esse fugit perferendis voluptates ducimus quos, maxime itaque totam accusamus, doloremque corrupti vel reiciendis quas! Fugit incidunt tempore nihil officia dicta?        </div> 
+          </ion-card-content>
+        </ion-card>
+      </ion-row>
+
+      <ion-row *ngIf=" this.folder == 'Contact'">
+        <ion-card  class="about-container">
+          <ion-card-header>
+            <ion-card-title>BELA TAFELS</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <div class="text-block">For enquieries please send an email to <a href="mailto:zivcakstanislav@yahoo.com">zivcakstanislav@yahoo.com</a></div>
+            <div class="text-block">You can also call me anytime at <strong>+31657760147</strong></div>
+
+            <!-- <div class="text-block">For more info please mail <a href="mailto:info@belatafels.nl">info@belatafels.nl</a> </div> -->
+          </ion-card-content>
+        </ion-card>
+      </ion-row>
+
+
+
+      <ion-row>
+        <app-footer class="footer">     
+        </app-footer>
+      </ion-row>
+    </ion-col>
+    
+
+    
+
+  
+
+  </div>
+
+
+</ion-content>
