@@ -130,7 +130,7 @@ ion-toolbar {
   height: 33vh;
   margin: auto;
   height: 33vh;
-  background-image: url('/assets/imgs/post_1/detail_5.jpg');
+  background-image: url('/assets/imgs/bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -145,10 +145,24 @@ ion-toolbar {
 .sidemenu {
   margin-top: 33vh !important;
   background: transparent !important;
+  ion-item {
+    margin-left: 32px;
+    color: gray;
+
+    &.selected {
+      color: var(--ion-color-primary);
+      --background: unset !important;
+      // ion-icon {
+      //   color: white !important;
+  
+      // }
+    }
+  }
 }
 
 ion-split-pane {
   --border: 0px !important;
+  --side-max-width: 25vw;
 }
 
 ion-list {

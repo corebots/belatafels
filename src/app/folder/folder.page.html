@@ -14,7 +14,7 @@
 
       <ion-row>
         <div class="company_details">
-          <ion-img class="logo" src="assets/imgs/bela_tafels_logo_outline.png"></ion-img>
+          <ion-img class="logo" src="assets/imgs/bela_tafels_logo_outline.svg"></ion-img>
           
           <strong *ngIf=" this.folder == 'Home' || this.folder == 'Contact' || this.folder == 'About'" class="capitalize">One of it's kind.</strong>
           <strong *ngIf=" this.folder == 'tablemodel1'">Table 1 - Chestnut</strong>
@@ -25,7 +25,13 @@
 
       <ion-row *ngIf=" this.folder == 'Home'">
         <div class="text-block__main">Each of our tables is unique piece. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ea ipsum facilis, nisi fugit voluptatem illum. Provident pariatur quasi a porro quam ipsum nisi, itaque laborum hic maxime dolor autem.</div>
+      </ion-row>
+
+      <ion-row *ngIf=" this.folder == 'Home'">
         <div class="text-block">Please have a look at our current creations below:</div>
+      </ion-row>
+
+      <ion-row *ngIf=" this.folder == 'Home'">
         <ion-card *ngFor="let pic of this.myService.photos; let i = index" (click)="navigateTo('tablemodel' + i)" class="pic-container">
           <img class="pic" src="{{ pic[0] }}"> 
           <ion-card-header>
